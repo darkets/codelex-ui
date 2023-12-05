@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons & Toasts</title>
+
+    <script>
+      function showToast() {
+        var toast = document.getElementById("test-toast");
+        toast.classList.add("show");
+
+        setTimeout(() => { toast.classList.remove("show") }, 5000);
+      }
+
+      function hideToast() {
+        var toast = document.getElementById("test-toast");
+        toast.classList.remove("show");
+      }
+    </script>
+  </head>
+  <body>
+    <h1 style="text-align: center; color: rgb(0, 0, 0)">Buttons</h1>
+
+    <div class="buttons">
+      <div class="button-one gap">
+        <button class="normal">
+          Button
+        </button>
+        <button class="normal-disabled">
+          Button
+        </button>
+        <button class="transparent">
+          Button
+        </button>
+        <button class="transparent-disabled">
+          Button
+        </button>
+      </div>
+      <div class="button-two gap">
+        <button class="primary normal">
+          Primary Button
+        </button>
+        <button class="primary normal-disabled">
+          Primary Button
+        </button>
+        <button class="primary transparent">
+          Primary Button
+        </button>
+        <button class="primary transparent-disabled">
+          Primary Button
+        </button>
+        <button class="secondary normal">
+          Secondary Button
+        </button>
+        <button class="secondary normal-disabled">
+          Secondary Button
+        </button>
+        <button class="secondary transparent">
+          Secondary Button
+        </button>
+        <button class="secondary transparent-disabled">
+          Secondary Button
+        </button>
+      </div>
+      <div class="button-three gap">
+        <button class="normal enabled">
+          Button 1
+        </button>
+        <button class="normal disabled">
+          Button 1
+        </button>
+        <button class="subscribe enabled">
+          Subscription
+        </button>
+        <button class="subscribe disabled">
+          Subscription
+        </button>
+      </div>
+      <div class="button-four gap">
+        <button class="normal enabled">
+          NORMAL
+        </button>
+        <button class="normal disabled">
+          NORMAL
+        </button>
+        <button class="round enabled">
+          +
+        </button>
+        <button class="round disabled">
+          +
+        </button>
+      </div>
+      <div class="button-five gap">
+        <button class="nobg enabled">
+          Button
+        </button>
+        <button class="nobg disabled">
+          Button
+        </button>
+        <button class="normal enabled">
+          Pirmary button
+        </button>
+        <button class="normal disabled">
+          Primary button
+        </button>
+      </div>
+
+      <div class="bg-dark">
+        <h2>Active effect</h2>
+        <div class="button-six gap">
+          <button class="primary enabled">
+            Button
+          </button>
+          <button class="primary disabled">
+            Button
+          </button>
+          <button class="secondary enabled">
+            Button
+          </button>
+          <button class="secondary disabled">
+            Button
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="toasts">
+      <h1>Toasts</h1>
+
+      <div class="button-three">
+        <button class="subscribe enabled" onclick="showToast()">
+          Test Toast
+        </button>
+      </div>
+
+      <div class="toast info">
+        <p>This is a somewhat long paragraph to demonstrate the support of mutliple-line toasts.</p>
+        <button>✖</button>
+      </div>
+
+      <div class="toast success">
+        <p>Test text hello world!</p>
+        <button>✖</button>
+      </div>
+
+      <div class="toast error">
+        <p>Test text hello world!</p>
+        <button>✖</button>
+      </div>
+
+      <div class="toast warning">
+        <p>Test text hello world!</p>
+        <button>✖</button>
+      </div>
+
+      <div class="toast">
+        <p>Test text hello world!</p>
+        <button>✖</button>
+      </div>
+      <div class="toast info ghost">
+        <p>Test text hello world!</p>
+        <button>✖</button>
+      </div>
+      <div class="toast success ghost">
+        <p>Test text hello world!</p>
+        <button>✖</button>
+      </div>
+      <div class="toast error ghost">
+        <p>Test text hello world!</p>
+        <button>✖</button>
+      </div>
+      <div class="toast warning ghost">
+        <p>Test text hello world!</p>
+        <button>✖</button>
+      </div>
+
+      <div id="test-toast" class="toast hide">
+        <p>Test text hello world!</p>
+        <button onclick="hideToast()">✖</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
