@@ -398,17 +398,12 @@ button {
   color: #1FC24E;
 }
 
-
 .toast.info {
   background-color: #145599;
 }
 
 .info.ghost {
   color: #145599;
-}
-
-.toast.error {
-  background-color: #FF2121;
 }
 
 .toast.error {
